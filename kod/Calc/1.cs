@@ -1,7 +1,7 @@
 ﻿namespace Calc
 {
     // taki kod też działa
-    public class Program
+    public class Program1
     {
         public static int Main(string[] args)
         {

@@ -82,5 +82,72 @@ namespace Calculator.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [Test]
+        public void Main_Returns_One_If_All_Remaining_Arguments_After_ndec_String_Generate_Non_Decreasing_Sequence()
+        {
+            string[] ndecArguments = { "ndec", "-9", "0", "2" };
+            int expected = 1;
+
+            int actual = Program.Main(ndecArguments);
+
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [Test]
+        public void Main_Returns_Minus_One_When_There_Is_Only_One_Argument_string_ndec()
+        {
+            int expected = -1;
+
+            int actual = Program.Main(new[] { "ndec" });
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Main_Returns_Minus_One_When_There_Is_Only_One_Argument_Remaining_After_String_ndec()
+        {
+            int expected = -1;
+
+            int actual = Program.Main(new[] { "ndec", "1" });
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Main_Returns_One_If_All_Remaining_Arguments_After_aseq_String_Generate_Arithmetic_Sequence()
+        {
+            string[] aseqArguments = { "aseq", "-5", "0", "5" };
+            int expected = 1;
+
+            int actual = Program.Main(aseqArguments);
+
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [Test]
+        public void Main_Returns_Minus_One_If_There_Is_Only_One_Argument_Remaining_After_aseq_String()
+        {
+            string[] aseqArguments = { "aseq", "1" };
+            int expected = -1;
+
+            int actual = Program.Main(aseqArguments);
+
+            Assert.AreEqual(expected, actual);
+
+        }
+
+        [Test]
+        public void Main_Returns_Minus_One_When_There_Is_Only_One_Argument_String_aseq()
+        {
+            int expected = -1;
+
+            int actual = Program.Main(new[] { "aseq" });
+
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
